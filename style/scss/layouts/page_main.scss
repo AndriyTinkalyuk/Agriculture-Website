@@ -4,9 +4,6 @@
 @use '../utils/functions' as functions;
 @use 'sass:color';
 
-body { 
-    overflow: hidden;
-}
 
 .logo {
     @extend %flex-space-between;
@@ -25,6 +22,11 @@ body.lock {
     background-color: #F1EFF0;
     height: 80vh;
     min-height: 430px;
+
+@media (max-width:425px) {
+    height: 350px;
+}
+
 
     &_subtitle {
         @extend %accent-text;
@@ -82,13 +84,18 @@ body.lock {
         background-size: cover;
         background-position: center;
         flex: 0 1 45%;
-        min-width: 320px;
+        min-width: 300px;
         height: 30vh;
         border-radius: 30px;
         overflow: hidden;
         @extend %flex-vert-center;
         transition: transform 0.3s ease-in-out .1s;
 
+
+        @media (max-width:425px) {
+            height: 250px;
+        }
+        
         &:hover {
             transform: scale(1.1);
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.27);
@@ -245,6 +252,10 @@ body.lock {
             flex: 1 1 100%;
             position: relative;
             min-height: 45vh;
+            @media (max-width:425px) {
+                min-height: 250px;
+            }
+            
 
             & img {
                 position: absolute;
@@ -309,7 +320,7 @@ body.lock {
     // .categories_item
 
     &_item {
-        min-width: 300px;
+        min-width: 290px;
         flex: 1 1 300px;
         border: 3px solid vars.$background-color;
         padding: 10px;

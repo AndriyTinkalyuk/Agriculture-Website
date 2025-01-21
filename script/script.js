@@ -11,18 +11,22 @@ burgerMenu(iconMenu, menuBody, tools);
 let introBlock = document.querySelector('.welcome');
 let animationPlayed = sessionStorage.getItem('animationPlayed');
 
+
 if (!animationPlayed) {
   // Якщо анімація ще не програвалася
+  document.body.classList.add('lock');
   introBlock.style.display = 'block';
   document.querySelector('.draw').addEventListener('animationend', (e) => {
     introBlock.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('lock');
 
     // Встановлюємо прапорець у sessionStorage
     sessionStorage.setItem('animationPlayed', 'true');
   });
-} else {
-  // Якщо анімація вже програвалася
-  introBlock.style.display = 'none';
-  document.body.style.overflow = 'auto';
+} 
+
+
+if (navigator.userAgent.includes('Telegram') || navigator.userAgent.includes('WebView')) {
+  document.body.classList.add('telegram-webview');
 }
+
