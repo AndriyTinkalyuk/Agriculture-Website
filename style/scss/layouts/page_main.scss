@@ -16,6 +16,7 @@ body.lock {
 
 .intro {
     background-image: url(../../../images/intro_background.webp);
+    background-image: url(../../../images/intro_background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -80,6 +81,7 @@ body.lock {
 
     &_item {
         background-image: url(../../../images/vegetables_background.webp);
+        background-image: url(../../../images/vegetables_background.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -103,6 +105,7 @@ body.lock {
 
         &:nth-child(1) {
             background-image: url(../../../images/fresh_background.webp);
+            background-image: url(../../../images/fresh_background.png);
         }
     }
 

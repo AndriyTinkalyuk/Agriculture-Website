@@ -24,9 +24,3 @@ if (!animationPlayed) {
     sessionStorage.setItem('animationPlayed', 'true');
   });
 } 
-
-
-if (navigator.userAgent.includes('Telegram') || navigator.userAgent.includes('WebView')) {
-  document.body.classList.add('telegram-webview');
-}
-
